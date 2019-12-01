@@ -1,0 +1,7 @@
+D:\petar\c#\Проекти\Elevator2_0\Elevator2_0\bin\Debug\Elevator2_0.exe.config
+D:\petar\c#\Проекти\Elevator2_0\Elevator2_0\bin\Debug\Elevator2_0.exe
+D:\petar\c#\Проекти\Elevator2_0\Elevator2_0\bin\Debug\Elevator2_0.pdb
+D:\petar\c#\Проекти\Elevator2_0\Elevator2_0\obj\Debug\Elevator2_0.csprojAssemblyReference.cache
+D:\petar\c#\Проекти\Elevator2_0\Elevator2_0\obj\Debug\Elevator2_0.csproj.CoreCompileInputs.cache
+D:\petar\c#\Проекти\Elevator2_0\Elevator2_0\obj\Debug\Elevator2_0.exe
+D:\petar\c#\Проекти\Elevator2_0\Elevator2_0\obj\Debug\Elevator2_0.pdb
