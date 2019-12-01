@@ -56,7 +56,7 @@ namespace Elevator2_0
         private void Leave()
         {
             Console.WriteLine($"Agent {id} wants to leave work");
-            if (!currentFloor.Equals(AccessLevel[0]))
+            if (!currentFloor.Equals(AccessLevel[0]))//check if the agent is on ground floor
             {
                 UseElevator();
             }
@@ -72,7 +72,7 @@ namespace Elevator2_0
             {
                 WaitForElevator();
                 string floor;
-                if (leavework)
+                if (leavework)// if the agent wants to leave make the next floor to be ground floor
                 {
                     floor = AccessLevel[0];
                 }
@@ -87,14 +87,13 @@ namespace Elevator2_0
         private void WaitForDestination(string floor)
         {
             string nextFloor = floor;
-            elevator.empty = true;
-            if (nextFloor == currentFloor)
+            if (nextFloor == currentFloor)//if the elevator is on the same floor ,don't use it
             {
                 Console.WriteLine($"Agent {id} is already on the requested floor");
             }
             else
             {
-                elevator.GoTo(nextFloor);
+                elevator.GoTo(nextFloor);//add request
                 while (elevator.ElevatorFloor != nextFloor)
                 {
                     Console.WriteLine($"Agent {id} is in the elevator");
@@ -107,7 +106,7 @@ namespace Elevator2_0
 
         private void WaitForElevator()
         {
-            while (!currentFloor.Equals(elevator.ElevatorFloor))
+            while (!currentFloor.Equals(elevator.ElevatorFloor))//wait till the elevator is on the same floor
             {
                 Console.WriteLine($"Agent {id} is waiting for the elevator");
                 Thread.Sleep(500);
@@ -122,7 +121,7 @@ namespace Elevator2_0
             while (!correctFloor)
             {
                 floor = rnd.Next(elevator.Floors.Count);
-                if (AccessLevel.Contains(elevator.Floors[floor]))
+                if (AccessLevel.Contains(elevator.Floors[floor]))//check if the agents has access to this floor
                 {
                     correctFloor = true;
                     nextFloor = elevator.Floors[floor];

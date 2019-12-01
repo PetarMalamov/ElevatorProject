@@ -15,7 +15,6 @@ namespace Elevator2_0
         private object obj = new object();
         public string ElevatorFloor { get; set; }
         private int timeBetweenFloors { get; set; }
-        public bool empty { get; set; }
         public Elevator(Building build)
         {
             this.build = build;
@@ -52,10 +51,8 @@ namespace Elevator2_0
             requests.RemoveAt(0);
             while (oldestRequest == ElevatorFloor && requests.Count > 0)
             {
-
                 oldestRequest = requests[0];
                 requests.RemoveAt(0);
-
             }
             return oldestRequest;
         }
@@ -64,7 +61,7 @@ namespace Elevator2_0
         {
             lock (requests)
             {
-                requests.Add(floor);
+                requests.Add(floor);//add to the list with request 
             }
         }
 
@@ -72,7 +69,7 @@ namespace Elevator2_0
         {
             lock (obj)
             {
-                requests.Insert(0, floor);
+                requests.Insert(0, floor);//make this the first request
             }
         }
     }
